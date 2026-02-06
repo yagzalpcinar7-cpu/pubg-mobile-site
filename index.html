@@ -1,10 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <title>Test</title>
+<meta charset="UTF-8">
+<title>PUBG Hassasiyet Kodları</title>
+
+<style>
+body{
+    background:#111;
+    color:white;
+    font-family:Arial;
+    text-align:center;
+}
+
+.box{
+    background:#222;
+    margin:20px;
+    padding:20px;
+    border-radius:10px;
+}
+button{
+    padding:10px;
+    background:orange;
+    border:none;
+    cursor:pointer;
+}
+</style>
 </head>
+
 <body>
-  <h1>ÇALIŞIYOR 🔥</h1>
+
+<h1>PUBG Mobile Hassasiyet Kodları 🎮</h1>
+
+<div class="box">
+<h2>Yakın Çatışma Hassasiyeti</h2>
+<p id="kod1">7123-4567-8910</p>
+<button onclick="kopyala()">Kopyala</button>
+</div>
+
+<script>
+function kopyala(){
+navigator.clipboard.writeText(
+document.getElementById("kod1").innerText
+);
+alert("Kod kopyalandı!");
+}
+</script>
+
 </body>
 </html>
