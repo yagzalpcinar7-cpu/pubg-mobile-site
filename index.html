@@ -17,6 +17,37 @@
     transform: scale(2);
   }
 </style>
+  .menu {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  font-size: 28px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.menu-icerik {
+  display: none;
+  background: #222;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.menu:hover .menu-icerik {
+  display: block;
+}
+
+.menu-icerik button {
+  display: block;
+  width: 100%;
+  margin: 5px 0;
+  background: black;
+  color: white;
+  border: 1px solid white;
+  padding: 5px;
+  cursor: pointer;
+}
+C
 
 <title>PUBG Hassasiyetleri</title>
 </head>
@@ -48,4 +79,15 @@
 
 
 </body>
+  <div class="menu">
+  ⋮
+  <div class="menu-icerik">
+    <button onclick="filtre('gyro')">Jiroskoplu</button>
+    <button onclick="filtre('nogryo')">Jiroskopsuz</button>
+    <button onclick="filtre('telefon')">Telefon</button>
+    <button onclick="filtre('tablet')">Tablet</button>
+    <button onclick="filtre('hepsi')">Hepsi</button>
+  </div>
+</div>
+
 </html>
