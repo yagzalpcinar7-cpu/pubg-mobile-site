@@ -6,18 +6,18 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
-  <style>
+  
+ <style>
+img {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.buyu {
+  transform: scale(2);
+}
 
-  img {
-    cursor: pointer;
-    transition: transform 0.3s ease;
-  }
-
-  .buyu {
-    transform: scale(2);
-  }
-</style>
-  .menu {
+/* Menü */
+.menu {
   position: fixed;
   top: 10px;
   left: 10px;
@@ -25,18 +25,15 @@
   cursor: pointer;
   z-index: 1000;
 }
-
 .menu-icerik {
   display: none;
   background: #222;
   padding: 10px;
   border-radius: 8px;
 }
-
 .menu:hover .menu-icerik {
   display: block;
 }
-
 .menu-icerik button {
   display: block;
   width: 100%;
@@ -47,7 +44,8 @@
   padding: 5px;
   cursor: pointer;
 }
-C
+</style>
+
 
 <title>PUBG Hassasiyetleri</title>
 </head>
@@ -56,30 +54,24 @@ C
 
 <h1>PUBG Hassasiyet Rehberi</h1>
 
-<h2>TroZ</h2>
-<img src="trotz.png"width="300" onclick="this.classList.toggle('buyu')">
-  <img src="trotz3.png"width="300" onclick="this.classList.toggle('buyu')">
-  <img src="trotz2.png"width="300" onclick="this.classList.toggle('buyu')">
+<img src="trotz.png" class="gyro telefon" width="300" onclick="this.classList.toggle('buyu')">
+<img src="trotz3.png" class="gyro telefon" width="300" onclick="this.classList.toggle('buyu')">
+<img src="trotz2.png" class="gyro telefon" width="300" onclick="this.classList.toggle('buyu')">
 
+<img src="hamsig.png" class="gyro telefon" width="300" onclick="this.classList.toggle('buyu')">
+<img src="hamsig2.png" class="gyro telefon" width="300" onclick="this.classList.toggle('buyu')">
+
+<img src="coffin.png" class="gyro telefon" width="300">
   
-<h2>Hamsig</h2>
-<img src="hamsig.png" width="300" onclick="this.classList.toggle('buyu')">
-  <img src="hamsig2.png" width="300" onclick="this.classList.toggle('buyu')">
-  
+<h2>Icy</h2>
+<img src="icy.png" class="telefon" width="300" onclick="this.classList.toggle('buyu')">
+
+<h2>Doğukan Bunny</h2>
+<img src="dogukan-bunny.png" class="tablet" width="300" onclick="this.classList.toggle('buyu')">
 
 
-<h2>Coffin</h2>
-<img src="coffin.png" width="300">
 
-<h2>Jonathan</h2>
-<img src="jonathan.png" width="300">
-
-<h2>Order</h2>
-<img src="order.png" width="300">
-
-
-</body>
-  <div class="menu">
+<div class="menu">
   ⋮
   <div class="menu-icerik">
     <button onclick="filtre('gyro')">Jiroskoplu</button>
@@ -87,7 +79,22 @@ C
     <button onclick="filtre('telefon')">Telefon</button>
     <button onclick="filtre('tablet')">Tablet</button>
     <button onclick="filtre('hepsi')">Hepsi</button>
+    <script>
+function filtre(tip) {
+  const resimler = document.querySelectorAll("img");
+
+  resimler.forEach(img => {
+    if (tip === "hepsi") {
+      img.style.display = "inline-block";
+    } else {
+      img.style.display = img.classList.contains(tip) ? "inline-block" : "none";
+    }
+  });
+}
+</script>
+
   </div>
 </div>
-
+ 
+</body>
 </html>
