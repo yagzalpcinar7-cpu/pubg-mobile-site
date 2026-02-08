@@ -3,68 +3,81 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PUBG Hassasiyetleri</title>
+  <title>PUBG Hassasiyet Rehberi</title>
 
   <style>
-body {
-  background: radial-gradient(circle at top, #1a1a1a 0%, #000 70%);
-  color: white;
-  text-align: center;
-  margin: 0;
-  min-height: 100vh;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-
-h1 { margin-top: 24px; }
-h2 { margin-top: 26px; }
-
-/* Resimler mobil uyumlu + tıklayınca büyüsün/küçülsün */
-img {
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  max-width: 92vw;
-  height: auto;
-}
-
-.buyu {
-  transform: scale(2);
-}
-      position: fixed; top: 10px; left: 10px;
-      z-index: 9999;
-      user-select: none;
+    /* GENEL */
+    body {
+      background: radial-gradient(circle at top, #1a1a1a 0%, #000 70%);
+      color: white;
+      text-align: center;
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
     }
-    .menu-btn {
-      font-size: 30px; cursor: pointer;
-      background: transparent; border: 0; color: white;
+
+    h1 {
+      margin-top: 24px;
     }
+
+    h2 {
+      margin-top: 28px;
+    }
+
+    /* RESİMLER */
+    img {
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      max-width: 92vw;
+      height: auto;
+      margin: 6px;
+    }
+
+    .buyu {
+      transform: scale(2);
+    }
+
+    /* SOL ÜST 3 NOKTA MENÜ */
+    .menu {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      font-size: 28px;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
     .menu-icerik {
       display: none;
       background: #222;
       padding: 10px;
-      border-radius: 10px;
+      border-radius: 8px;
       margin-top: 6px;
-      min-width: 140px;
-      text-align: left;
     }
+
+    .menu:hover .menu-icerik {
+      display: block;
+    }
+
     .menu-icerik button {
-      display: block; width: 100%;
+      display: block;
+      width: 100%;
       margin: 6px 0;
-      background: black; color: white;
+      background: black;
+      color: white;
       border: 1px solid white;
-      padding: 8px;
+      padding: 6px;
       cursor: pointer;
-      border-radius: 6px;
-      text-align: center;
     }
-    .menu-icerik.show { display: block; }
   </style>
 </head>
 
 <body>
+
+  <!-- SOL ÜST 3 NOKTA -->
   <div class="menu">
-    <button class="menu-btn" onclick="toggleMenu()">⋮</button>
-    <div class="menu-icerik" id="menuIcerik">
+    ⋮
+    <div class="menu-icerik">
       <button onclick="filtre('telefon')">Telefon</button>
       <button onclick="filtre('tablet')">Tablet</button>
       <button onclick="filtre('hepsi')">Hepsi</button>
@@ -73,63 +86,46 @@ img {
 
   <h1>PUBG Hassasiyet Rehberi</h1>
 
-  <!-- TABLET -->
-  <div class="player tablet">
-    <h2>Trotz (Tablet)</h2>
-    <img src="trotz.png" width="300" onclick="this.classList.toggle('buyu')">
-    <img src="trotz2.png" width="300" onclick="this.classList.toggle('buyu')">
-    <img src="trotz3.png" width="300" onclick="this.classList.toggle('buyu')">
-  </div>
+  <!-- TROTZ (TABLET) -->
+  <h2>Trotz (Tablet)</h2>
+  <img src="trotz.png" class="tablet" onclick="this.classList.toggle('buyu')">
+  <img src="trotz2.png" class="tablet" onclick="this.classList.toggle('buyu')">
+  <img src="trotz3.png" class="tablet" onclick="this.classList.toggle('buyu')">
 
-  <!-- TELEFON -->
-  <div class="player telefon">
-    <h2>Hamsig (Telefon)</h2>
-    <img src="hamsig.png" width="300" onclick="this.classList.toggle('buyu')">
-    <img src="hamsig2.png" width="300" onclick="this.classList.toggle('buyu')">
-  </div>
+  <!-- HAMSİG (TELEFON) -->
+  <h2>Hamsig (Telefon)</h2>
+  <img src="hamsig.png" class="telefon" onclick="this.classList.toggle('buyu')">
+  <img src="hamsig2.png" class="telefon" onclick="this.classList.toggle('buyu')">
 
-  <div class="player telefon">
-    <h2>Coffin (Telefon)</h2>
-    <img src="coffin.png" width="300" onclick="this.classList.toggle('buyu')">
-  </div>
+  <!-- COFFIN (TELEFON) -->
+  <h2>Coffin (Telefon)</h2>
+  <img src="coffin.png" class="telefon" onclick="this.classList.toggle('buyu')">
 
-  <div class="player telefon">
-    <h2>Icy (Telefon)</h2>
-    <img src="icy.png" width="300" onclick="this.classList.toggle('buyu')">
-  </div>
+  <!-- ICY (TELEFON) -->
+  <h2>Icy (Telefon)</h2>
+  <img src="icy.png" class="telefon" onclick="this.classList.toggle('buyu')">
 
-  <!-- TABLET -->
-  <div class="player tablet">
-    <h2>Doğukan Bunny (Tablet)</h2>
-    <img src="dogukan-bunny.png" width="300" onclick="this.classList.toggle('buyu')">
-    <img src="dogukan-bunny2.png" width="300" onclick="this.classList.toggle('buyu')">
-    <img src="dogukan-bunny3.png" width="300" onclick="this.classList.toggle('buyu')">
-  </div>
+  <!-- DOĞUKAN BUNNY (TABLET) -->
+  <h2>Doğukan Bunny (Tablet)</h2>
+  <img src="dogukan-bunny.png" class="tablet" onclick="this.classList.toggle('buyu')">
+  <img src="dogukan-bunny2.png" class="tablet" onclick="this.classList.toggle('buyu')">
+  <img src="dogukan-bunny3.png" class="tablet" onclick="this.classList.toggle('buyu')">
 
   <script>
     function filtre(tip) {
-      const players = document.querySelectorAll(".player");
-      players.forEach(p => {
+      const resimler = document.querySelectorAll("img");
+
+      resimler.forEach(img => {
         if (tip === "hepsi") {
-          p.style.display = "block";
+          img.style.display = "inline-block";
         } else {
-          p.style.display = p.classList.contains(tip) ? "block" : "none";
+          img.style.display = img.classList.contains(tip)
+            ? "inline-block"
+            : "none";
         }
       });
-      // filtre seçince menüyü kapat (mobil rahat)
-      document.getElementById("menuIcerik").classList.remove("show");
     }
-
-    function toggleMenu() {
-      document.getElementById("menuIcerik").classList.toggle("show");
-    }
-
-    // Menü dışına basınca kapansın
-    document.addEventListener("click", (e) => {
-      const menu = document.querySelector(".menu");
-      const box = document.getElementById("menuIcerik");
-      if (!menu.contains(e.target)) box.classList.remove("show");
-    });
   </script>
+
 </body>
 </html>
