@@ -4,106 +4,63 @@
   
 <head>
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
-  
- <style>
-img {
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-.buyu {
-  transform: scale(2);
-}
+<title>PUBG Hassasiyetleri</title>
 
-/* Menü */
-.menu {
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  font-size: 28px;
-  cursor: pointer;
-  z-index: 1000;
-}
-.menu-icerik {
-  display: none;
-  background: #222;
-  padding: 10px;
-  border-radius: 8px;
-}
-.menu:hover .menu-icerik {
-  display: block;
-}
-.menu-icerik button {
-  display: block;
-  width: 100%;
-  margin: 5px 0;
-  background: black;
-  color: white;
-  border: 1px solid white;
-  padding: 5px;
-  cursor: pointer;
-}
+<style>
+  body { background:black; color:white; text-align:center; }
+  img { cursor:pointer; transition: transform 0.3s ease; max-width: 90%; height: auto; }
+  .buyu { transform: scale(2); }
+
+  /* Menü (sol üst 3 nokta) */
+  .menu { position: fixed; top: 10px; left: 10px; font-size: 28px; cursor: pointer; z-index: 1000; }
+  .menu-icerik { display:none; background:#222; padding:10px; border-radius:8px; }
+  .menu:hover .menu-icerik { display:block; }
+  .menu-icerik button { display:block; width:100%; margin:5px 0; background:black; color:white; border:1px solid white; padding:6px; cursor:pointer; }
 </style>
 
-
-<title>PUBG Hassasiyetleri</title>
 </head>
-
-<body style="background-color:black; color:white; text-align:center;">
+  <body style="background:black; color:white; text-align:center;">
 
 <h1>PUBG Hassasiyet Rehberi</h1>
-<h2>trotz</h2>
-<img src="trotz.png" class="gyro telefon" width="300" onclick="this.classList.toggle('buyu')">
-<img src="trotz3.png" class="gyro telefon" width="300" onclick="this.classList.toggle('buyu')">
-<img src="trotz2.png" class="gyro telefon" width="300" onclick="this.classList.toggle('buyu')">
-  
-<h2>hamsig</h2>
-<img src="hamsig.png" class="gyro telefon" width="300" onclick="this.classList.toggle('buyu')">
-<img src="hamsig2.png" class="gyro telefon" width="300" onclick="this.classList.toggle('buyu')">
-  
-<h2>coffin</h2>
-<img src="coffin.png" class="gyro telefon" width="300" onclick="this.classList.toggle('buyu')">
-  <img src="coffin2.png" class="gyro telefon" width="300" onclick="this.classList.toggle('buyu')">
-  <img src="coffin3.png" class="gyro telefon" width="300" onclick="this.classList.toggle('buyu')">
-  <img src="coffin4.png" class="gyro telefon" width="300" onclick="this.classList.toggle('buyu')">
-  
-<h2>Icy</h2>
+
+<h2>Trotz</h2>
+<img src="trotz.png" class="tablet" width="300" onclick="this.classList.toggle('buyu')">
+<img src="trotz2.png" class="tablet" width="300" onclick="this.classList.toggle('buyu')">
+<img src="trotz3.png" class="tablet" width="300" onclick="this.classList.toggle('buyu')">
+
+<h2>Hamsig (Telefon)</h2>
+<img src="hamsig.png" class="telefon" width="300" onclick="this.classList.toggle('buyu')">
+<img src="hamsig2.png" class="telefon" width="300" onclick="this.classList.toggle('buyu')">
+
+<h2>Coffin (Telefon)</h2>
+<img src="coffin.png" class="telefon" width="300" onclick="this.classList.toggle('buyu')">
+
+<h2>Icy (Telefon)</h2>
 <img src="icy.png" class="telefon" width="300" onclick="this.classList.toggle('buyu')">
-  <img src="icy2.png" class="telefon" width="300" onclick="this.classList.toggle('buyu')">
-<img src="icy3.png" class="telefon" width="300" onclick="this.classList.toggle('buyu')">
-<img src="icy4.png" class="telefon" width="300" onclick="this.classList.toggle('buyu')">
+
+<h2>Doğukan Bunny (Tablet)</h2>
+<img src="dogukan-bunny.png" class="tablet" width="300" onclick="this.classList.toggle('buyu')">
+<img src="dogukan-bunny2.png" class="tablet" width="300" onclick="this.classList.toggle('buyu')">
+<img src="dogukan-bunny3.png" class="tablet" width="300" onclick="this.classList.toggle('buyu')">
 
 
-<h2>Doğukan Bunny</h2>
-<img src="dogukan-bunny.png" class="tablet gyro" width="300" onclick="this.classList.toggle('buyu')">
-<img src="dogukan-bunny2.png" class="tablet gyro" width="300" onclick="this.classList.toggle('buyu')">
-<img src="dogukan-bunny3.png" class="tablet gyro" width="300" onclick="this.classList.toggle('buyu')">
 
-<div class="menu">
-  ⋮
-  <div class="menu-icerik">
-    <button onclick="filtre('gyro')">Jiroskoplu</button>
-    <button onclick="filtre('nogryo')">Jiroskopsuz</button>
-    <button onclick="filtre('telefon')">Telefon</button>
-    <button onclick="filtre('tablet')">Tablet</button>
-    <button onclick="filtre('hepsi')">Hepsi</button>
-    <script>
+  <script>
 function filtre(tip) {
   const resimler = document.querySelectorAll("img");
-
   resimler.forEach(img => {
     if (tip === "hepsi") {
       img.style.display = "inline-block";
     } else {
-      img.style.display = img.classList.contains(tip) ? "inline-block" : "none";
+      img.style.display = img.classList.contains(tip)
+        ? "inline-block"
+        : "none";
     }
   });
 }
 </script>
 
-  </div>
-</div>
- 
 </body>
 </html>
